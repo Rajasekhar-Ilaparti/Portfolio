@@ -420,6 +420,105 @@ body.menu-open{ overflow:hidden; }
   html{ scroll-behavior:auto; }
   .nav-drawer{ transition:none; }
 }
+
+/* Readability refinements */
+body{font-size:clamp(16px,1.05vw,18px);}
+.about-copy p{font-size:clamp(1.05rem,1.8vw,1.25rem);}
+.about-copy .lead{font-size:clamp(1.4rem,3vw,2rem);}
+.blist li{font-size:clamp(1rem,1.55vw,1.08rem);}
+.info-card .row{font-size:1rem;}
+.hero-role{font-size:clamp(1.08rem,2.5vw,1.42rem);}
+.pill{font-size:.78rem;}
+.nav-link{font-size:.84rem;}
+.edu-table{font-size:clamp(.98rem,1.6vw,1.1rem);}
+.ach-item p{font-size:1rem;}
+.gal-note{font-size:.95rem;}
+.why-copy p{font-size:1.05rem;}
+.goal-item p{font-size:.98rem;}
+.trio-card p{font-size:1rem;}
+.skill-group .lbl{font-size:1.18rem;}
+.chip{font-size:.78rem;}
+@media (max-width:720px){
+  body{font-size:16px;}
+  section{padding-block:clamp(48px,12vw,82px);}
+  .container{padding-inline:20px;}
+  .hero-name{font-size:clamp(3rem,15vw,5rem);}
+  .hero-role{font-size:1.12rem;line-height:1.6;}
+  .sec-title{font-size:clamp(2rem,10vw,3rem);}
+  .about-copy p,.blist li,.why-copy p,.trio-card p,.goal-item p{font-size:1.02rem;}
+}
+
+
+
+/* Refined typography: original fonts + clearer hierarchy */
+.hero-name{
+  font-family:var(--serif);
+  font-weight:600;
+  letter-spacing:-.035em;
+  font-size:clamp(2.8rem,9vw,6.4rem);
+  line-height:.98;
+}
+.sec-title{
+  font-family:var(--serif);
+  font-weight:600;
+  letter-spacing:-.025em;
+  font-size:clamp(2.15rem,5.5vw,3.8rem);
+  line-height:1.08;
+}
+.about-copy p,
+.trio-card p,
+.why-copy p,
+.goal-item p,
+.blist li,
+.ach-item p,
+.gal-note,
+.info-card .row,
+.edu-table,
+.hero-role{
+  font-family:var(--sans);
+}
+.about-copy .lead,
+.why-copy .lead{
+  font-family:var(--serif);
+}
+.card,.trio-card,.why-aside,.info-card,.hero-card{
+  overflow:visible;
+}
+.card,.trio-card,.why-aside,.info-card{
+  min-width:0;
+}
+.blist li,
+.trio-card p,
+.why-copy p,
+.goal-item p,
+.about-copy p,
+.ach-item p{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.blist li b,
+.about-copy b,
+.trio-card b,
+.why-copy b,
+.goal-item b,
+.ach-item b{
+  font-weight:600;
+  color:var(--ink);
+}
+@media (max-width:720px){
+  .hero-name{font-size:clamp(2.9rem,15vw,5rem);}
+  .sec-title{font-size:clamp(2.15rem,10vw,3.2rem);}
+  .about-copy p,
+  .trio-card p,
+  .why-copy p,
+  .goal-item p,
+  .blist li,
+  .ach-item p{
+    font-size:1rem;
+    line-height:1.7;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -488,9 +587,9 @@ body.menu-open{ overflow:hidden; }
     <div class="about-grid" style="margin-top:2rem">
       <div class="about-copy">
         <p class="lead reveal d1">A 5th-semester B.Tech ECE student who learns best by building, experimenting, and understanding how hardware and software work together.</p>
-        <p class="reveal d2">Completed an embedded systems internship at <b>Emertxe Information Technologies</b>, building a PIC16F877A-based microwave oven controller with keypad input, LCD output, and a finite state machine governing cooking modes and safety interlocks.</p>
-        <p class="reveal d3">Off the bench, I run a small freelance photo-editing practice on Fiverr with 5-star client ratings — an eye for detail that carries straight back into clean layouts and readable code.</p>
-        <p class="reveal d4"><b>Beyond engineering:</b> photography, creative design, content creation, freelancing, and exploring new technologies.</p>
+        <p class="reveal d2">Completed an <b>Embedded Systems internship at Emertxe Information Technologies</b>, where I built a PIC16F877A-based microwave controller with <b>keypad input, LCD output, and FSM-based safety logic</b>.</p>
+        <p class="reveal d3">Outside engineering, I work in <b>freelance photo editing</b> and enjoy <b>photography, content creation, and design</b>.</p>
+        <p class="reveal d4"><b>Beyond engineering:</b> photography, design, content creation, freelancing, and exploring new technologies.</p>
       </div>
       <div class="photo-stack">
         <div class="photo-slot ar-portrait has-img reveal d2">
@@ -582,9 +681,9 @@ body.menu-open{ overflow:hidden; }
       <div class="exp-role">Embedded Systems Intern</div>
       <div class="exp-co">Emertxe Information Technologies</div>
       <ul class="blist">
-        <li>Developed a PIC16F877A-based microwave oven controller featuring keypad input, LCD display, and timer-driven alerts.</li>
-        <li>Implemented finite state-machine logic in Embedded C for cooking modes and safety protocols.</li>
-        <li>Debugged firmware via MPLAB IDE and validated hardware through Proteus simulation and physical deployment.</li>
+        <li>Developed a <b>PIC16F877A-based microwave oven controller</b> featuring keypad input, LCD display, and timer-driven alerts.</li>
+        <li>Implemented <b>finite state-machine logic</b> in Embedded C for cooking modes and safety protocols.</li>
+        <li>Debugged firmware via MPLAB IDE and validated hardware through <b>Proteus simulation</b> and physical deployment.</li>
       </ul>
       <div class="chips"><span class="chip">PIC16F877A</span><span class="chip">Embedded C</span><span class="chip">MPLAB IDE</span><span class="chip">Proteus</span></div>
     </div>
@@ -603,7 +702,7 @@ body.menu-open{ overflow:hidden; }
         <ul class="blist">
           <li>Keypad input, LCD output &amp; safety interlocks on PIC16F877A.</li>
           <li>Finite state-machine logic for cooking modes &amp; emergency stops.</li>
-          <li>Validated via Proteus simulation and MPLAB IDE.</li>
+          <li>Validated via <b>Proteus simulation</b> and MPLAB IDE.</li>
         </ul>
         <div class="chips"><span class="chip">PIC16F877A</span><span class="chip">FSM</span></div>
       </div>
@@ -613,7 +712,7 @@ body.menu-open{ overflow:hidden; }
         <ul class="blist">
           <li>IoT irrigation setup using Arduino Nano &amp; ESP32 with servo-driven gates.</li>
           <li>Logic for flood prevention and water optimization.</li>
-          <li>Integrated with a real-time web dashboard.</li>
+          <li>Integrated with a <b>real-time web dashboard</b>.</li>
         </ul>
         <div class="chips"><span class="chip">Arduino Nano</span><span class="chip">ESP32</span><span class="chip">IoT</span></div>
       </div>
@@ -621,7 +720,7 @@ body.menu-open{ overflow:hidden; }
         <div class="proj-num">03</div>
         <div class="proj-title">ESP32 Web Control Dashboard</div>
         <ul class="blist">
-          <li>Browser-based control panel hosted on an ESP32 in Access Point mode.</li>
+          <li><b>Browser-based control panel hosted on an ESP32</b> in Access Point mode.</li>
           <li>Direct device management &amp; live sensor visualization.</li>
           <li>Runs with no external network needed.</li>
         </ul>
@@ -646,9 +745,9 @@ body.menu-open{ overflow:hidden; }
     <p class="eyebrow reveal"><span class="n">07</span> Skills</p>
     <h2 class="sec-title reveal d1">Tools of the <em>trade.</em></h2>
     <div class="skill-grid" style="margin-top:2rem">
-      <div class="skill-group reveal d1"><div class="lbl">Languages</div><div class="chips" style="margin-top:0"><span class="chip">C</span><span class="chip">Python</span><span class="chip">Embedded C</span><span class="chip">Verilog</span></div></div>
+      <div class="skill-group reveal d1"><div class="lbl">Languages</div><div class="chips" style="margin-top:0"><span class="chip">C</span><span class="chip">Python</span><span class="chip">Embedded C</span><span class="chip"><b>Verilog</b></span></div></div>
       <div class="skill-group reveal d2"><div class="lbl">Embedded / MCU</div><div class="chips" style="margin-top:0"><span class="chip">PIC16F877A</span><span class="chip">Arduino UNO</span><span class="chip">ESP32</span><span class="chip">ESP8266</span></div></div>
-      <div class="skill-group reveal d1"><div class="lbl">Tools &amp; Platforms</div><div class="chips" style="margin-top:0"><span class="chip">MPLAB IDE</span><span class="chip">Arduino IDE</span><span class="chip">Proteus</span><span class="chip">Icarus Verilog</span><span class="chip">GTKWave</span><span class="chip">Vivado</span></div></div>
+      <div class="skill-group reveal d1"><div class="lbl">Tools &amp; Platforms</div><div class="chips" style="margin-top:0"><span class="chip">MPLAB IDE</span><span class="chip">Arduino IDE</span><span class="chip">Proteus</span><span class="chip">Icarus <b>Verilog</b></span><span class="chip">GTKWave</span><span class="chip">Vivado</span></div></div>
       <div class="skill-group reveal d2"><div class="lbl">Creative</div><div class="chips" style="margin-top:0"><span class="chip">Canva</span><span class="chip">Photoshop</span><span class="chip">Lightroom</span></div></div>
     </div>
   </div>
@@ -671,7 +770,7 @@ body.menu-open{ overflow:hidden; }
     <h2 class="sec-title reveal d1">Why I do <em>this.</em></h2>
     <div class="why-grid" style="margin-top:2rem">
       <div class="why-copy">
-        <p class="lead reveal d1">What pulls me toward embedded work is the moment code stops being abstract and starts moving something — a gate, a motor, a display.</p>
+        <p class="lead reveal d1">I enjoy embedded work because code becomes something physical — a <b>gate, motor, display, or sensor-driven system</b>.</p>
         <p class="reveal d2">Growing up around Gudlavalleru, I watched irrigation and water management run on manual routines that cost people time and, some seasons, crops. That's part of why the Automated Water Gate project mattered to me beyond being a class assignment — flood prevention and water optimization are real problems for communities like mine, not just IoT demo material.</p>
         <p class="reveal d3">Every device I build has to answer to physics before it answers to a spec sheet. That constraint is exactly what I find worth showing up for.</p>
       </div>
@@ -696,7 +795,7 @@ body.menu-open{ overflow:hidden; }
     <h2 class="sec-title reveal d1">Where this is <em>headed.</em></h2>
     <div class="why-grid" style="margin-top:1rem">
       <div>
-        <p class="reveal d1" style="max-width:62ch;font-weight:300;font-size:1.02rem">I want to keep building at the intersection of hardware and connectivity — systems that solve practical, resource-conscious problems for places like home, more than systems built only to demo well.</p>
+        <p class="reveal d1" style="max-width:62ch;font-weight:300;font-size:1.02rem">I want to build <b>practical systems at the intersection of hardware and connectivity</b> — solutions that work beyond a demo.</p>
         <div class="goal-list">
           <div class="goal-item reveal d1">
             <div class="num">01</div>
@@ -764,7 +863,7 @@ body.menu-open{ overflow:hidden; }
      { src: "photos/workshop.jpg", caption: "Embedded systems Workshop" },
      { src: "photos/teamup.jpg", caption: "Team Collaboration at Hackathon" },
      { src: "photos/hackathon.jpg", caption: "Project Presentation" },
-     { src: "photos/awardceremony.jpg", caption: "Award Ceremony" },
+     { src: "photos/awardcermony.jpg", caption: "Award Ceremony" },
   ];
   const TOTAL_SLOTS = 6;
 
