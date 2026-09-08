@@ -7,15 +7,11 @@
 <meta name="description" content="Ilaparti Rajasekhar · B.Tech ECE student exploring embedded systems, IoT, electronics, and emerging technologies." />
 <meta name="theme-color" content="#F5F1E8" />
 
-<!-- Fonts: Playfair Display (display) + Work Sans (body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
 <style>
-/* =========================================================================
-   DESIGN TOKENS — clean, classic, premium (warm paper / ink / teal accent)
-   ========================================================================= */
 :root{
   --bg:      #F5F1E8;
   --bg-alt:  #EFEADE;
@@ -57,7 +53,6 @@ ul{ list-style:none; }
 .container{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(18px,4.5vw,60px); }
 section{ padding-block:clamp(56px,8vw,130px); }
 
-/* eyebrow label */
 .eyebrow{
   font-family:var(--sans); font-size:.7rem; font-weight:600; letter-spacing:.2em;
   text-transform:uppercase; color:var(--accent-2); display:inline-flex; align-items:center; gap:.8ch;
@@ -72,9 +67,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 }
 .sec-title em{ font-style:italic; color:var(--accent); font-weight:500; }
 
-/* =========================================================================
-   HEADER / NAV — desktop + mobile hamburger
-   ========================================================================= */
 .nav{
   position:sticky; top:0; z-index:50;
   background:rgba(245,241,232,.88); backdrop-filter:blur(16px) saturate(140%);
@@ -92,7 +84,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 }
 .brand .dot{ color:var(--accent); }
 
-/* Desktop nav links */
 .nav-links-desktop{
   display:flex; align-items:center; gap:.15rem; overflow-x:auto; scrollbar-width:none;
   -ms-overflow-style:none;
@@ -111,7 +102,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
   background:var(--accent); border-radius:2px;
 }
 
-/* Hamburger button */
 .menu-toggle{
   display:none; width:44px; height:44px; border:none; background:transparent;
   cursor:pointer; padding:10px; z-index:60; -webkit-tap-highlight-color:transparent;
@@ -128,7 +118,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .menu-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
 .menu-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
 
-/* Mobile overlay menu */
 .nav-overlay{
   position:fixed; inset:0; background:rgba(32,30,26,.45); z-index:45;
   opacity:0; visibility:hidden; transition:opacity .35s var(--ease), visibility .35s;
@@ -162,15 +151,11 @@ section{ padding-block:clamp(56px,8vw,130px); }
 }
 .nav-drawer .drawer-footer a{ color:var(--accent); font-weight:500; }
 
-/* Show hamburger / hide desktop links on small screens */
 @media (max-width:960px){
   .nav-links-desktop{ display:none; }
   .menu-toggle{ display:block; }
 }
 
-/* =========================================================================
-   HERO
-   ========================================================================= */
 .hero{ min-height:calc(100svh - var(--nav-h)); display:flex; align-items:center; position:relative; padding-block:clamp(32px,6vw,60px); }
 .hero-grid{ display:grid; grid-template-columns:1.35fr .9fr; gap:clamp(1.8rem,5vw,5rem); align-items:center; width:100%; }
 .hero-tag{ font-size:.74rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--accent-2); margin-bottom:1.3rem; }
@@ -218,17 +203,11 @@ section{ padding-block:clamp(56px,8vw,130px); }
   .hero{ min-height:auto; padding-block:clamp(40px,10vw,70px) 50px; }
 }
 
-/* =========================================================================
-   REVEAL
-   ========================================================================= */
 .reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.in{ opacity:1; transform:none; }
 .reveal.d1{ transition-delay:.08s; } .reveal.d2{ transition-delay:.16s; }
 .reveal.d3{ transition-delay:.24s; } .reveal.d4{ transition-delay:.32s; }
 
-/* =========================================================================
-   ABOUT
-   ========================================================================= */
 .section-alt{ background:var(--bg-alt); }
 .about-grid{ display:grid; grid-template-columns:1.5fr 1fr; gap:clamp(1.8rem,4.5vw,4.5rem); align-items:start; }
 .about-copy p{ font-size:clamp(.98rem,1.7vw,1.18rem); font-weight:300; color:var(--ink); margin-bottom:1.3rem; max-width:58ch; }
@@ -246,9 +225,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
   .photo-stack{ order:-1; max-width:320px; margin-inline:auto; width:100%; }
 }
 
-/* =========================================================================
-   EDUCATION
-   ========================================================================= */
 .edu-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; margin-inline:-4px; padding-inline:4px; }
 .edu-table{ width:100%; min-width:520px; border-collapse:collapse; font-size:clamp(.9rem,1.5vw,1.05rem); }
 .edu-table th{
@@ -262,9 +238,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .edu-table .score{ color:var(--accent); font-weight:600; white-space:nowrap; }
 .edu-table .year{ color:var(--muted); white-space:nowrap; }
 
-/* =========================================================================
-   CARDS (experience / projects)
-   ========================================================================= */
 .card{
   background:var(--panel); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
   padding:clamp(1.4rem,3vw,2.4rem); transition:transform .4s var(--ease), box-shadow .4s var(--ease);
@@ -290,17 +263,11 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .proj-title{ font-family:var(--serif); font-weight:600; font-size:clamp(1.15rem,2.4vw,1.45rem); margin-bottom:.9rem; line-height:1.25; }
 @media (max-width:720px){ .proj-grid{ grid-template-columns:1fr; } }
 
-/* =========================================================================
-   SKILLS
-   ========================================================================= */
 .skill-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(1.5rem,3.5vw,3rem); }
 .skill-group .lbl{ font-family:var(--serif); font-size:1.1rem; font-weight:600; margin-bottom:1rem; display:flex; align-items:center; gap:.65ch; }
 .skill-group .lbl::before{ content:""; width:7px; height:7px; background:var(--accent); border-radius:50%; }
 @media (max-width:560px){ .skill-grid{ grid-template-columns:1fr; } }
 
-/* =========================================================================
-   VALUES / IDENTITIES  (trio cards)
-   ========================================================================= */
 .trio-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1.2rem,2.8vw,2rem); }
 .trio-card{
   background:var(--panel); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow);
@@ -314,9 +281,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .trio-card p{ font-weight:300; color:var(--ink); font-size:.95rem; max-width:38ch; }
 @media (max-width:900px){ .trio-grid{ grid-template-columns:1fr; } }
 
-/* =========================================================================
-   WHY / GOALS
-   ========================================================================= */
 .why-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.8rem,4.5vw,4.5rem); align-items:start; }
 .why-copy .lead{ font-family:var(--serif); font-size:clamp(1.2rem,2.6vw,1.7rem); font-weight:400; line-height:1.45; color:var(--ink); margin-bottom:1.1rem; }
 .why-copy p{ font-weight:300; font-size:1rem; color:var(--ink); max-width:56ch; margin-bottom:.95rem; }
@@ -333,9 +297,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .goal-item h4{ font-family:var(--serif); font-weight:600; font-size:1.05rem; margin-bottom:.25rem; }
 .goal-item p{ font-weight:300; font-size:.92rem; color:var(--muted); max-width:42ch; }
 
-/* =========================================================================
-   PHOTO PLACEHOLDER SLOTS
-   ========================================================================= */
 .photo-slot{
   position:relative; border-radius:12px; overflow:hidden; background:var(--bg-alt);
   border:1.5px dashed var(--line); display:flex; flex-direction:column; align-items:center;
@@ -351,9 +312,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .photo-slot.has-img{ border-style:solid; border-color:var(--line); }
 .photo-stack{ display:flex; flex-direction:column; gap:1.2rem; }
 
-/* =========================================================================
-   GALLERY
-   ========================================================================= */
 .gal-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(.9rem,2vw,1.5rem); }
 .tile{ position:relative; aspect-ratio:4/3; border-radius:12px; overflow:hidden; background:var(--panel); border:1px solid var(--line); box-shadow:var(--shadow); }
 .tile img{ width:100%; height:100%; object-fit:cover; transition:transform .7s var(--ease); }
@@ -366,7 +324,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
   background:linear-gradient(to top,rgba(20,18,15,.85),rgba(20,18,15,0));
   opacity:0; transform:translateY(8px); transition:opacity .4s var(--ease), transform .4s var(--ease);
 }
-/* Always show caption on touch devices */
 @media (hover:none){
   .tile .cap{ opacity:1; transform:none; }
 }
@@ -381,9 +338,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 @media (max-width:720px){ .gal-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:420px){ .gal-grid{ grid-template-columns:1fr; } }
 
-/* =========================================================================
-   ACHIEVEMENTS
-   ========================================================================= */
 .ach-list{ border-top:1px solid var(--line); }
 .ach-item{ display:flex; align-items:flex-start; gap:1rem; padding:1.35rem .15rem; border-bottom:1px solid var(--line-2); transition:padding-left .3s var(--ease); }
 @media (hover:hover){ .ach-item:hover{ padding-left:.7rem; } }
@@ -391,9 +345,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .ach-item h4{ font-family:var(--serif); font-weight:600; font-size:clamp(1.05rem,2.2vw,1.3rem); }
 .ach-item p{ color:var(--muted); font-size:.9rem; margin-top:.12rem; }
 
-/* =========================================================================
-   CONTACT
-   ========================================================================= */
 .contact{ text-align:center; padding-block:clamp(70px,12vw,160px); background:var(--bg-alt); }
 .contact h2{ font-family:var(--serif); font-weight:600; font-size:clamp(2.1rem,7.5vw,5rem); letter-spacing:-.02em; line-height:1.05; margin-bottom:2rem; }
 .contact h2 em{ font-style:italic; color:var(--accent); font-weight:500; }
@@ -410,7 +361,6 @@ section{ padding-block:clamp(56px,8vw,130px); }
 .foot-close{ margin-top:2.6rem; font-size:.82rem; color:var(--muted); line-height:1.6; }
 .foot-close .n{ color:var(--accent-2); font-weight:500; }
 
-/* Body lock when menu open */
 body.menu-open{ overflow:hidden; }
 
 @media (prefers-reduced-motion:reduce){
@@ -421,7 +371,6 @@ body.menu-open{ overflow:hidden; }
   .nav-drawer{ transition:none; }
 }
 
-/* Readability refinements */
 body{font-size:clamp(16px,1.05vw,18px);}
 .about-copy p{font-size:clamp(1.05rem,1.8vw,1.25rem);}
 .about-copy .lead{font-size:clamp(1.4rem,3vw,2rem);}
@@ -448,9 +397,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   .about-copy p,.blist li,.why-copy p,.trio-card p,.goal-item p{font-size:1.02rem;}
 }
 
-
-
-/* Refined typography: original fonts + clearer hierarchy */
 .hero-name{
   font-family:var(--serif);
   font-weight:600;
@@ -518,27 +464,20 @@ body{font-size:clamp(16px,1.05vw,18px);}
     line-height:1.7;
   }
 }
-
 </style>
 </head>
 <body>
 
-<!-- ============================ NAV ============================ -->
 <nav class="nav" aria-label="Primary">
   <div class="nav-inner">
     <a class="brand" href="#top" data-testid="brand">Ilaparti Rajasekhar<span class="dot">.</span></a>
-
-    <!-- Desktop links -->
     <div class="nav-links-desktop" id="nav-links-desktop"></div>
-
-    <!-- Mobile hamburger -->
     <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- Mobile overlay + drawer -->
 <div class="nav-overlay" id="nav-overlay" hidden></div>
 <aside class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation" hidden>
   <div class="drawer-links" id="drawer-links"></div>
@@ -547,7 +486,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </aside>
 
-<!-- ============================ HERO ============================ -->
 <header id="top">
   <div class="container hero">
     <div class="hero-grid">
@@ -579,7 +517,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </header>
 
-<!-- ============================ ABOUT ============================ -->
 <section id="about" class="section-alt">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">01</span> About</p>
@@ -607,7 +544,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ VALUES ============================ -->
 <section id="values">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">02</span> Values</p>
@@ -632,7 +568,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ WORKING IDENTITIES ============================ -->
 <section id="identities" class="section-alt">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">03</span> How I Work</p>
@@ -654,7 +589,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ EDUCATION ============================ -->
 <section id="education">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">04</span> Education</p>
@@ -672,7 +606,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ EXPERIENCE ============================ -->
 <section id="experience" class="section-alt">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">05</span> Experience</p>
@@ -690,7 +623,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ PROJECTS ============================ -->
 <section id="projects">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">06</span> Projects</p>
@@ -739,7 +671,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ SKILLS ============================ -->
 <section id="skills" class="section-alt">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">07</span> Skills</p>
@@ -753,17 +684,14 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ GALLERY ============================ -->
 <section id="gallery">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">08</span> Gallery</p>
     <h2 class="sec-title reveal d1">Hackathons &amp; <em>events.</em></h2>
     <div class="gal-grid reveal d1" id="gal-grid" style="margin-top:2rem"></div>
-    <p class="gal-note reveal d1">To add photos, drop image files into a <code>photos/</code> folder next to this page and list them in the <code>galleryPhotos</code> array near the bottom of the file.</p>
   </div>
 </section>
 
-<!-- ============================ WHY ============================ -->
 <section id="why" class="section-alt">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">09</span> Why</p>
@@ -788,7 +716,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ FUTURE GOALS ============================ -->
 <section id="goals">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">10</span> Future Goals</p>
@@ -822,7 +749,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ ACHIEVEMENTS ============================ -->
 <section id="achievements" class="section-alt">
   <div class="container">
     <p class="eyebrow reveal"><span class="n">11</span> Achievements</p>
@@ -835,7 +761,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </section>
 
-<!-- ============================ CONTACT ============================ -->
 <footer class="contact" id="contact">
   <div class="container">
     <p class="eyebrow reveal" style="justify-content:center"><span class="n">12</span> Contact</p>
@@ -849,14 +774,12 @@ body{font-size:clamp(16px,1.05vw,18px);}
   </div>
 </footer>
 
-<!-- Lenis — smooth scrolling (CDN, no build step) -->
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 (function(){
   "use strict";
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* -------- GALLERY DATA -------------------------------------- */
   const galleryPhotos = [
      { src: "photos/about.jpeg", caption: "ECE-Day Hosting" },
      { src: "photos/presentation.jpeg", caption: "Tech Fest — Paper Presentation" },
@@ -875,13 +798,11 @@ body{font-size:clamp(16px,1.05vw,18px);}
     ["achievements","Achievements"],["contact","Contact"]
   ];
 
-  /* -------- BUILD NAV (desktop + mobile drawer) -------- */
   const desktopLinks = document.getElementById("nav-links-desktop");
   const drawerLinks  = document.getElementById("drawer-links");
   const linkMap = {};
 
   SECTIONS.forEach((s, i) => {
-    // Desktop
     const b = document.createElement("button");
     b.className = "nav-link";
     b.type = "button";
@@ -891,7 +812,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
     desktopLinks.appendChild(b);
     linkMap[s[0]] = b;
 
-    // Mobile drawer
     const d = document.createElement("button");
     d.className = "drawer-link";
     d.type = "button";
@@ -900,7 +820,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
     drawerLinks.appendChild(d);
   });
 
-  /* -------- MOBILE MENU -------- */
   const toggle   = document.getElementById("menu-toggle");
   const overlay  = document.getElementById("nav-overlay");
   const drawer   = document.getElementById("nav-drawer");
@@ -910,7 +829,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
     toggle.setAttribute("aria-label", "Close menu");
     overlay.hidden = false;
     drawer.hidden = false;
-    // force reflow then open
     requestAnimationFrame(() => {
       overlay.classList.add("open");
       drawer.classList.add("open");
@@ -938,12 +856,10 @@ body{font-size:clamp(16px,1.05vw,18px);}
   });
   overlay.addEventListener("click", closeMenu);
 
-  // Close on Escape
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") closeMenu();
   });
 
-  /* -------- BUILD GALLERY -------- */
   const galGrid = document.getElementById("gal-grid");
   const camSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3.5"/></svg>';
   for (let i = 0; i < TOTAL_SLOTS; i++) {
@@ -959,7 +875,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
     galGrid.appendChild(tile);
   }
 
-  /* -------- LENIS SMOOTH SCROLL -------- */
   let lenis = null;
   if (!reduce && window.Lenis) {
     lenis = new Lenis({ duration: 1.1, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
@@ -976,13 +891,11 @@ body{font-size:clamp(16px,1.05vw,18px);}
     }
   }
 
-  // Desktop nav clicks
   desktopLinks.addEventListener("click", e => {
     const b = e.target.closest(".nav-link");
     if (b) scrollToId(b.getAttribute("data-target"));
   });
 
-  // Mobile drawer clicks
   drawerLinks.addEventListener("click", e => {
     const b = e.target.closest(".drawer-link");
     if (b) {
@@ -991,7 +904,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
     }
   });
 
-  /* -------- SCROLL SPY (desktop only) -------- */
   const spy = new IntersectionObserver((ents) => {
     ents.forEach(en => {
       if (en.isIntersecting) {
@@ -1009,7 +921,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
     if (el) spy.observe(el);
   });
 
-  /* -------- REVEAL -------- */
   const revEls = document.querySelectorAll(".reveal");
   if (reduce) {
     revEls.forEach(el => el.classList.add("in"));
@@ -1025,7 +936,6 @@ body{font-size:clamp(16px,1.05vw,18px);}
     revEls.forEach(el => ro.observe(el));
   }
 
-  /* -------- HERO ENTRANCE -------- */
   function playHero() {
     document.getElementById("hero-name").classList.add("in");
     document.getElementById("hero-role").classList.add("in");
