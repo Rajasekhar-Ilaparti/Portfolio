@@ -199,7 +199,9 @@ section{ padding-block:clamp(56px,8vw,130px); }
 
 @media (max-width:860px){
   .hero-grid{ grid-template-columns:1fr; gap:2rem; }
-  .hero-card{ display:none; }
+  .hero-card{ order:-1; width:min(200px,55vw); padding:0; border:0; background:none; box-shadow:none; }
+  .hero-card .photo-slot{ margin-bottom:0 !important; border-radius:50%; box-shadow:var(--shadow); }
+  .hero-card .monogram,.hero-card .row{ display:none; }
   .hero{ min-height:auto; padding-block:clamp(40px,10vw,70px) 50px; }
 }
 
@@ -482,7 +484,8 @@ body{font-size:clamp(16px,1.05vw,18px);}
 <aside class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation" hidden>
   <div class="drawer-links" id="drawer-links"></div>
   <div class="drawer-footer">
-    <a href="mailto:rajasekharilaparthi@gmail.com">rajasekharilaparthi@gmail.com</a>
+    <a href="mailto:rajasekharilaparthi@gmail.com">rajasekharilaparthi@gmail.com</a><br>
+    <a href="https://github.com/Rajasekhar-Ilaparti" target="_blank" rel="noopener">GitHub</a>
   </div>
 </aside>
 
@@ -525,12 +528,11 @@ body{font-size:clamp(16px,1.05vw,18px);}
       <div class="about-copy">
         <p class="lead reveal d1">A 5th-semester B.Tech ECE student who learns best by building, experimenting, and understanding how hardware and software work together.</p>
         <p class="reveal d2">Completed an <b>Embedded Systems internship at Emertxe Information Technologies</b>, where I built a PIC16F877A-based microwave controller with <b>keypad input, LCD output, and FSM-based safety logic</b>.</p>
-        <p class="reveal d3">Outside engineering, I work in <b>freelance photo editing</b> and enjoy <b>photography, content creation, and design</b>.</p>
-        <p class="reveal d4"><b>Beyond engineering:</b> photography, design, content creation, freelancing, and exploring new technologies.</p>
+        <p class="reveal d3">Outside engineering, I work in <b>freelance photo editing</b> and enjoy <b>photography, content creation, and design</b> — and I'm always exploring new technologies.</p>
       </div>
       <div class="photo-stack">
         <div class="photo-slot ar-portrait has-img reveal d2">
-          <img src="photos/about.jpeg" alt="About section portrait" loading="lazy" />
+          <img src="photos/WhatsApp Image 2026-08-05 at 9.34.53 AM.jpeg" alt="Portrait of Ilaparti Rajasekhar on campus" loading="lazy" style="object-position:center 25%" />
         </div>
         <div class="info-card reveal d2">
           <div class="row"><span class="k">Location</span><span class="v">Gudlavalleru, Krishna Dist., AP</span></div>
@@ -704,7 +706,7 @@ body{font-size:clamp(16px,1.05vw,18px);}
       </div>
       <div class="photo-stack">
         <div class="photo-slot ar-portrait has-img reveal d2">
-          <img src="photos/hackathon.jpg" alt="Hackathon event photo" loading="lazy" decoding="async" />
+          <img src="photos/paperpresentation.jpeg" alt="Presenting a technical paper" loading="lazy" decoding="async" />
         </div>
         <div class="why-aside reveal d2">
           <div class="qmark">”</div>
@@ -769,6 +771,7 @@ body{font-size:clamp(16px,1.05vw,18px);}
       <a class="clink" href="mailto:rajasekharilaparthi@gmail.com" data-testid="contact-email">rajasekharilaparthi@gmail.com</a>
       <a class="clink" href="tel:+917997873792" data-testid="contact-phone">+91 7997873792</a>
       <a class="clink" href="https://www.linkedin.com/in/rajasekhar-ilaparti" target="_blank" rel="noopener" data-testid="contact-linkedin">linkedin.com/in/rajasekhar-ilaparti</a>
+      <a class="clink" href="https://github.com/Rajasekhar-Ilaparti" target="_blank" rel="noopener" data-testid="contact-github">github.com/Rajasekhar-Ilaparti</a>
     </div>
     <p class="foot-close reveal d3">Based in <span class="n">Gudlavalleru, Krishna District, Andhra Pradesh</span><br>© 2026 Ilaparti Rajasekhar</p>
   </div>
@@ -783,10 +786,10 @@ body{font-size:clamp(16px,1.05vw,18px);}
   const galleryPhotos = [
      { src: "photos/about.jpeg", caption: "ECE-Day Hosting" },
      { src: "photos/presentation.jpeg", caption: "Tech Fest — Paper Presentation" },
-     { src: "photos/workshop.jpg", caption: "Embedded systems Workshop" },
+     { src: "photos/workshop.jpg", caption: "Embedded Systems Workshop" },
      { src: "photos/teamup.jpg", caption: "Team Collaboration at Hackathon" },
      { src: "photos/hackathon.jpg", caption: "Project Presentation" },
-     { src: "photos/award cermony.jpg", caption: "award ceremony" },
+     { src: "photos/award cermony.jpg", caption: "Award Ceremony" },
   ];
   const TOTAL_SLOTS = 6;
 
