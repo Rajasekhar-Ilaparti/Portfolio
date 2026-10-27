@@ -15,7 +15,11 @@ index.html   # the whole site: markup, styles, and scripts
 photos/      # profile, about, and gallery images
 ```
 
-The site is a single static page with no build step. It loads Google Fonts and [Lenis](https://github.com/darkroomengineering/lenis) for smooth scrolling.
+The site is a single static page with no build step. It loads Google Fonts and, in the browser, pulls live repository data from the GitHub API and a contribution chart from ghchart.rshah.org.
+
+## Resume
+
+Put your resume in this folder as `resume.pdf`. The "Download Resume" button on the profile card appears automatically once the file exists.
 
 ## Running locally
 
@@ -27,9 +31,17 @@ python -m http.server 8000
 
 Then visit http://localhost:8000.
 
-## Updating the gallery
+## Updating content
 
-Gallery tiles are defined in the `galleryPhotos` array near the bottom of `index.html`. Add a photo to `photos/` and add an entry with its `src` and `caption`.
+The data lists live in the `<script>` at the bottom of `index.html`:
+
+- `PROJECTS` — featured hardware builds; set `repo` to the GitHub repository name to link it. `cats` controls the filter buttons, and `overview`, `features`, `flow`, `hardware`, `future` fill the details pop-up.
+- `WEB_PROJECTS` — web apps with a `live` URL and/or `repo`, plus a screenshot in `photos/web/`.
+- `FILTERS` — order of the project filter buttons.
+- `TYPED_WORDS` — phrases cycled by the hero typing animation.
+- `GH_SKIP` / `GH_LIMIT` — repositories hidden from the live "GitHub Activity" section, and how many it shows. Repo descriptions come from each repository's "About" text on GitHub.
+- `TOOLS` — the tools grid.
+- `GALLERY` — photos in `photos/` with a `caption` (and optional `pos` to adjust cropping).
 
 ## Contact
 
