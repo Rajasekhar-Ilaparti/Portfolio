@@ -11,7 +11,7 @@ Personal portfolio of **Ilaparti Rajasekhar**, a B.Tech ECE student at Seshadri 
 - **Experience:** Embedded Systems Intern at Emertxe Information Technologies (PIC16F877A microwave oven controller)
 - **Hardware projects:** [Electrical Pole Safety Alert System](https://github.com/Rajasekhar-Ilaparti/Electrical-Pole-Safety-Alert-system), [AgriGate](https://github.com/Rajasekhar-Ilaparti/-AgriGate-Automated-Water-Gateway), [Plant Care Rover](https://github.com/Rajasekhar-Ilaparti/Plant-care-rover-with-RP-pico-and-Esp32c3), [FireGuard UNO](https://github.com/Rajasekhar-Ilaparti/FireGuard-Uno), [Turbidity Monitor](https://github.com/Rajasekhar-Ilaparti/Water-Treatment-Plant-Turbidity-Monitoring-System), [Smart Nursery Watering](https://github.com/Rajasekhar-Ilaparti/-Smart-Nursery-Watering-System), [Distance Alert System](https://github.com/Rajasekhar-Ilaparti/Distance-alert-system-with-Esp32-c3-mini)
 - **Web & software:** [LAN File Share](https://github.com/Rajasekhar-Ilaparti/LAN-File-Share), [OLED Video Maker](https://rajasekhar-ilaparti.github.io/oled-video-maker/), [Hush](https://hushchatt.netlify.app/)
-- **Skills:** C, Embedded C, C++, Python, JavaScript, Verilog · ESP32, Arduino, PIC16F877A, Raspberry Pi Pico · MPLAB IDE, Proteus, Vivado, GTKWave · AI tools: Claude / Claude Code, ChatGPT, GitHub Copilot, Google Gemini
+- **Skills:** C, Embedded C, C++, Python, Verilog · ESP32, Arduino, PIC16F877A, Raspberry Pi Pico · MPLAB IDE, Proteus, Vivado, GTKWave · AI tools: Claude / Claude Code, ChatGPT, GitHub Copilot, Google Gemini
 
 ## Hosting
 

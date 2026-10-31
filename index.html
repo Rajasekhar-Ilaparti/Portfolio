@@ -666,7 +666,7 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
       <h2 class="big reveal"><span>Skills</span><span class="accent">&amp; Tools</span></h2>
       <p class="intro reveal">The languages, hardware platforms, and software I use to design, simulate, and ship embedded projects.</p>
       <div class="skill-groups">
-        <div class="sg reveal" style="--c:var(--blue)"><h3>Programming Languages</h3><div class="tags"><span class="tag">C</span><span class="tag">Embedded C</span><span class="tag">C++ (Arduino)</span><span class="tag">Python / MicroPython</span><span class="tag">JavaScript</span><span class="tag">Verilog</span></div></div>
+        <div class="sg reveal" style="--c:var(--blue)"><h3>Programming Languages</h3><div class="tags"><span class="tag">C</span><span class="tag">Embedded C</span><span class="tag">C++ (Arduino)</span><span class="tag">Python / MicroPython</span><span class="tag">Verilog</span></div></div>
         <div class="sg reveal" style="--c:var(--orange)"><h3>Microcontrollers &amp; Boards</h3><div class="tags"><span class="tag">ESP32 / ESP32-C3</span><span class="tag">Arduino UNO / Nano</span><span class="tag">PIC16F877A</span><span class="tag">Raspberry Pi Pico</span><span class="tag">ESP8266</span></div></div>
         <div class="sg reveal" style="--c:var(--green)"><h3>Sensors &amp; Interfaces</h3><div class="tags"><span class="tag">I2C</span><span class="tag">UART</span><span class="tag">LCD / OLED</span><span class="tag">Servo &amp; relays</span><span class="tag">MPU6500</span><span class="tag">ACS712</span><span class="tag">HC-SR04</span></div></div>
         <div class="sg reveal" style="--c:var(--violet)"><h3>Concepts</h3><div class="tags"><span class="tag">Finite state machines</span><span class="tag">Wi-Fi web servers</span><span class="tag">Data logging (NVS)</span><span class="tag">Web Serial</span><span class="tag">Digital design</span></div></div>
@@ -828,17 +828,17 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
       hardware: ["Python 3.11", "PyInstaller", "Pillow", "qrcode", "Inno Setup installer", "Windows 8.1 / 10 / 11"] },
     { title: "OLED Video Maker", live: "https://rajasekhar-ilaparti.github.io/oled-video-maker/", repo: "", shot: "photos/web/oled-video-maker.jpg", icon: "chip", color: "#0891B2",
       desc: "Turn any video into an animation for a 128×64 I2C OLED and flash it to an ESP32 or Arduino straight from the browser.",
-      tags: ["JavaScript", "Web Serial", "Canvas", "ESP32 / Arduino"],
+      tags: ["Web app", "Web Serial", "Canvas", "ESP32 / Arduino"],
       overview: "A browser tool that converts a video into an animation for a 128×64 SH1106 or SSD1306 OLED and puts it on an ESP32 or Arduino board. Everything runs locally in the browser — trim and frame the video, pick a black-and-white style, preview it on a simulated OLED, then upload over USB with one click.",
       features: ["Trim, crop, zoom, rotate, and mirror the video", "Four black-and-white styles, including Floyd-Steinberg and Atkinson dithering", "5–30 FPS, loop or play once", "Live preview that looks like the real panel", "Shows board memory use and can shorten clips to fit", "Upload over USB from Chrome/Edge — no Arduino IDE needed"],
       flow: ["Load an MP4 or WebM video", "Frame it and choose how it becomes black and white", "Preview it on the simulated OLED", "Flash the board over USB, or export an Arduino sketch or Wi-Fi player"],
-      hardware: ["JavaScript", "Web Serial API", "Canvas", "XIAO ESP32-C3/C6", "ESP32", "Arduino Uno/Nano"] },
+      hardware: ["Browser app", "Web Serial API", "Canvas", "XIAO ESP32-C3/C6", "ESP32", "Arduino Uno/Nano"] },
     { title: "Hush", live: "https://hushchatt.netlify.app/", repo: "", shot: "photos/web/hush.jpg", icon: "chat", color: "#7C3AED",
       desc: "A private messaging app for the people you choose, with user accounts and admin-managed password resets.",
-      tags: ["JavaScript", "Messaging", "Netlify"],
+      tags: ["Web app", "Messaging", "Netlify"],
       overview: "Hush is a private messaging web app: users create an account and chat only with the people they choose. It's deployed on Netlify.",
       features: ["Account sign-up and log-in", "Private one-to-one conversations", "Admin-managed password resets", "Modern dark interface"],
-      hardware: ["JavaScript", "HTML/CSS", "Netlify"] }
+      hardware: ["HTML/CSS", "Netlify"] }
   ];
 
   // Order and labels of the project filter buttons.
