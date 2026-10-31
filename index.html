@@ -6,6 +6,13 @@
 <title>Ilaparti Rajasekhar — Embedded Systems &amp; IoT</title>
 <meta name="description" content="Ilaparti Rajasekhar · B.Tech ECE student building embedded systems, IoT devices, and web tools for hardware." />
 <meta name="theme-color" content="#F6F8FC" />
+<link rel="canonical" href="https://rajasekharilaparti-portfolio.netlify.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://rajasekharilaparti-portfolio.netlify.app/" />
+<meta property="og:title" content="Ilaparti Rajasekhar — Embedded Systems &amp; IoT" />
+<meta property="og:description" content="B.Tech ECE student building embedded systems, IoT devices, and web tools for hardware." />
+<meta property="og:image" content="https://rajasekharilaparti-portfolio.netlify.app/photos/profile.jpeg" />
+<meta name="twitter:card" content="summary" />
 <script>
   // Apply the saved theme before the page paints. Light is the default.
   try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
@@ -307,6 +314,11 @@ section{ padding-block:0 clamp(72px,9vw,112px); }
 .wbtn.primary:hover{ filter:brightness(1.1); }
 .wbtn.soft{ background:var(--surface-2); color:var(--ink); }
 .wbtn.soft:hover{ color:var(--blue); }
+@media (min-width:701px){
+  .web.wide{ grid-column:1/-1; flex-direction:row; }
+  .web.wide .shot{ flex:0 0 54%; aspect-ratio:auto; min-height:260px; border-bottom:0; border-right:1px solid var(--line); }
+  .web.wide .shot img{ object-position:left top; }
+}
 @media (max-width:700px){ .web-grid{ grid-template-columns:1fr; } }
 
 /* ---------- github live ---------- */
@@ -367,6 +379,7 @@ section{ padding-block:0 clamp(72px,9vw,112px); }
 .sg h3{ font-size:1.02rem; font-weight:600; display:flex; align-items:center; gap:.6ch; margin-bottom:.95rem; }
 .sg h3::before{ content:""; width:10px; height:10px; border-radius:3px; background:var(--c); }
 .sg .tags .tag{ font-size:.85rem; padding:.3em .75em; }
+.sg.full{ grid-column:1/-1; }
 .skill-groups{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:14px; }
 .tools{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
 .tool{ display:flex; align-items:center; gap:12px; padding:14px; border-radius:16px; background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow); }
@@ -579,8 +592,8 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
 
     <section id="web">
       <p class="label reveal">Web</p>
-      <h2 class="big reveal"><span>Web</span><span class="accent">Projects</span></h2>
-      <p class="intro reveal">Browser apps I've built and deployed — including tools that connect straight to hardware.</p>
+      <h2 class="big reveal"><span>Web &amp; Software</span><span class="accent">Projects</span></h2>
+      <p class="intro reveal">Apps I've built and shipped — a Windows file-sharing tool, browser apps, and tools that connect straight to hardware.</p>
       <div class="web-grid" id="web-grid"></div>
     </section>
 
@@ -657,6 +670,7 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
         <div class="sg reveal" style="--c:var(--orange)"><h3>Microcontrollers &amp; Boards</h3><div class="tags"><span class="tag">ESP32 / ESP32-C3</span><span class="tag">Arduino UNO / Nano</span><span class="tag">PIC16F877A</span><span class="tag">Raspberry Pi Pico</span><span class="tag">ESP8266</span></div></div>
         <div class="sg reveal" style="--c:var(--green)"><h3>Sensors &amp; Interfaces</h3><div class="tags"><span class="tag">I2C</span><span class="tag">UART</span><span class="tag">LCD / OLED</span><span class="tag">Servo &amp; relays</span><span class="tag">MPU6500</span><span class="tag">ACS712</span><span class="tag">HC-SR04</span></div></div>
         <div class="sg reveal" style="--c:var(--violet)"><h3>Concepts</h3><div class="tags"><span class="tag">Finite state machines</span><span class="tag">Wi-Fi web servers</span><span class="tag">Data logging (NVS)</span><span class="tag">Web Serial</span><span class="tag">Digital design</span></div></div>
+        <div class="sg reveal full" style="--c:var(--pink)"><h3>AI Tools</h3><div class="tags"><span class="tag">Claude / Claude Code</span><span class="tag">ChatGPT</span><span class="tag">GitHub Copilot</span><span class="tag">Google Gemini</span></div></div>
       </div>
       <div class="tools" id="tools-grid"></div>
     </section>
@@ -803,8 +817,15 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
       hardware: ["PIC16F877A", "Keypad", "LCD display"] }
   ];
 
-  // Web projects. `live` is the deployed URL, `repo` the GitHub repository (either can be empty).
+  // Web and software projects. `live` is the deployed URL, `download` an installer link, `repo` the GitHub repository (any can be empty).
   const WEB_PROJECTS = [
+    { title: "LAN File Share", live: "", download: "https://github.com/Rajasekhar-Ilaparti/LAN-File-Share/releases/latest/download/LAN-File-Share-Setup.exe", repo: "LAN-File-Share", shot: "photos/web/lan-file-share.png", icon: "share", color: "#6366F1",
+      desc: "Share a folder from your Windows PC with any phone or computer on the same Wi-Fi — just scan a QR code. No app, no cable, no cloud.",
+      tags: ["Python", "Windows app", "QR code", "Local network"],
+      overview: "A Windows app that shares a folder with phones, tablets, and computers on the same Wi-Fi. Pick a folder, press Start sharing, and scan the QR code — the folder opens in the phone's browser with nothing to install. Files travel directly over your own network and never leave it.",
+      features: ["QR code opens the shared folder in any phone browser", "File browser with list/grid views, thumbnails, search, and themes", "Preview photos, videos, music, PDFs, and text before downloading", "Download single files, selections, or whole folders as ZIP", "Optional uploads from the phone with progress and retries", "Optional 6-digit PIN and one-click Windows Firewall fix"],
+      flow: ["Choose a folder in the app and press Start sharing", "Scan the QR code with the phone's camera", "Browse, preview, and download files in the phone's browser", "Optionally send files from the phone back to the PC"],
+      hardware: ["Python 3.11", "PyInstaller", "Pillow", "qrcode", "Inno Setup installer", "Windows 8.1 / 10 / 11"] },
     { title: "OLED Video Maker", live: "https://rajasekhar-ilaparti.github.io/oled-video-maker/", repo: "", shot: "photos/web/oled-video-maker.jpg", icon: "chip", color: "#0891B2",
       desc: "Turn any video into an animation for a 128×64 I2C OLED and flash it to an ESP32 or Arduino straight from the browser.",
       tags: ["JavaScript", "Web Serial", "Canvas", "ESP32 / Arduino"],
@@ -864,6 +885,7 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
     leaf:  '<path d="M5 21c0-9 5-15 15-16-1 10-7 15-15 16z"/><path d="M5 21 13 13"/>',
     radar: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12 19 5"/>',
     chip:  '<rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+    share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/>',
     chat:  '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z"/>',
     user:  '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>'
   };
@@ -871,6 +893,7 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
   const ARROW = svg('<path d="M7 17 17 7M8 7h9v9"/>');
   const PLUS = svg('<path d="M12 5v14M5 12h14"/>');
   const GH_ICON = svg('<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>');
+  const DOWNLOAD = svg('<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>');
   const GLOBE = svg('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>');
   const REPO_ICON = svg('<path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v16H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/>');
   const GRID = '<svg class="grid" viewBox="0 0 88 88" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 22h28l8 8h52M0 66h36l8-8h44M22 0v18M66 88V70"/><circle cx="22" cy="22" r="2.5"/><circle cx="66" cy="66" r="2.5"/></svg>';
@@ -914,18 +937,20 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
   // ---------- web projects ----------
   const webGrid = document.getElementById("web-grid");
   webGrid.innerHTML = WEB_PROJECTS.map((w, i) =>
-    '<article class="web reveal">' +
+    '<article class="web reveal' + (i === 0 && WEB_PROJECTS.length % 2 ? " wide" : "") + '">' +
       '<div class="shot">' +
         (w.shot
           ? '<img src="' + esc(w.shot) + '" alt="Screenshot of ' + esc(w.title) + '" loading="lazy" decoding="async"/>'
           : '<div class="ph" style="background:linear-gradient(135deg,' + w.color + ',' + w.color + 'AA)">' + svg(ICONS[w.icon]) + '</div>') +
         (w.live ? '<span class="live-badge"><span class="led"></span>Live</span>' : "") +
+        (w.download ? '<span class="live-badge"><span class="led"></span>Windows app</span>' : "") +
       '</div>' +
       '<div class="wbody"><h3>' + esc(w.title) + '</h3><p>' + esc(w.desc) + '</p>' +
         '<div class="tags">' + w.tags.map(t => '<span class="tag">' + esc(t) + '</span>').join("") + '</div>' +
         '<div class="wbtns">' +
           (w.live ? '<a class="wbtn primary" href="' + esc(w.live) + '" target="_blank" rel="noopener">' + GLOBE + 'Live demo</a>' : "") +
-          (w.repo ? '<a class="wbtn ' + (w.live ? "soft" : "primary") + '" href="' + GH + encodeURIComponent(w.repo) + '" target="_blank" rel="noopener">' + GH_ICON + 'Source code</a>' : "") +
+          (w.download ? '<a class="wbtn primary" href="' + esc(w.download) + '">' + DOWNLOAD + 'Download for Windows</a>' : "") +
+          (w.repo ? '<a class="wbtn ' + (w.live || w.download ? "soft" : "primary") + '" href="' + GH + encodeURIComponent(w.repo) + '" target="_blank" rel="noopener">' + GH_ICON + 'Source code</a>' : "") +
           '<button type="button" class="wbtn soft" data-w="' + i + '">' + PLUS + 'Details</button>' +
         '</div>' +
       '</div>' +
@@ -955,8 +980,9 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
       '<div style="height:16px"></div>';
     document.getElementById("pm-foot").innerHTML =
       (p.live ? '<a class="wbtn primary" href="' + esc(p.live) + '" target="_blank" rel="noopener">' + GLOBE + 'Live demo</a>' : "") +
-      (p.repo ? '<a class="wbtn ' + (p.live ? "soft" : "primary") + '" href="' + GH + encodeURIComponent(p.repo) + '" target="_blank" rel="noopener">' + GH_ICON + 'View on GitHub</a>' : "") +
-      (!p.live && !p.repo ? '<span class="tag" style="align-self:center">Internship project · no public repository</span>' : "") +
+      (p.download ? '<a class="wbtn primary" href="' + esc(p.download) + '">' + DOWNLOAD + 'Download for Windows</a>' : "") +
+      (p.repo ? '<a class="wbtn ' + (p.live || p.download ? "soft" : "primary") + '" href="' + GH + encodeURIComponent(p.repo) + '" target="_blank" rel="noopener">' + GH_ICON + 'View on GitHub</a>' : "") +
+      (!p.live && !p.repo && !p.download ? '<span class="tag" style="align-self:center">Internship project · no public repository</span>' : "") +
       '<button type="button" class="wbtn soft" data-close>Close</button>';
     document.getElementById("pm-body").scrollTop = 0;
     document.documentElement.classList.add("modal-open");
