@@ -649,7 +649,7 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
           <div class="card">
             <span class="yr">2026</span><h3>Building in Public</h3><div class="org">Hardware projects and web tools on GitHub</div>
             <ul>
-              <li>Shipped seven ESP32, Arduino, and Raspberry Pi Pico projects with Wi-Fi dashboards, data logging, and safety alerts.</li>
+              <li>Shipped eight ESP32, Arduino, and Raspberry Pi Pico projects with Wi-Fi dashboards, data logging, and safety alerts.</li>
               <li>Built OLED Video Maker, a browser tool that converts videos for 128×64 OLEDs and flashes ESP32 boards over USB.</li>
             </ul>
           </div>
@@ -748,6 +748,15 @@ footer{ text-align:center; font-size:.85rem; color:var(--muted); padding:0 16px 
   // Featured hardware projects. `repo` is the GitHub repository name (empty for work without a public repo).
   // `cats` drive the filter buttons. `overview`, `features`, `flow`, `hardware`, and `future` fill the pop-up.
   const PROJECTS = [
+    { title: "Seed Dispensing Rover", repo: "Seed-Dispensing-Rover-ESP32-C3", icon: "rover", color: "#0D9488",
+      cats: ["ESP32", "Agriculture"],
+      desc: "Wi-Fi seed-sowing rover with a self-hosted joystick controller, servo seed hopper, gyro-accurate turns, tilt safety, and OTA updates.",
+      tags: ["ESP32-C3", "DRV8833", "MPU6050", "WebSocket", "OTA"],
+      overview: "A four-wheel seed-sowing rover on an ESP32-C3 Super Mini. The rover runs its own Wi-Fi access point and controller page: drive with a touch joystick while a servo-driven hopper drops seeds once or at a fixed interval. An MPU6050 gives measured 90° turns and keeps the rover driving straight.",
+      features: ["Smooth proportional joystick over a WebSocket with ramped acceleration", "Dispense once or continuously while driving, with adjustable speed, cycles, and interval", "Live servo calibration for the hopper's open and closed angles", "Gyro turns, hold-straight correction, and a square-path test", "Tilt cut-out, link-loss stop, and an always-visible STOP button", "Over-the-air firmware updates and settings saved in NVS"],
+      flow: ["The phone joins the rover's Wi-Fi and opens the controller page it hosts", "Joystick packets stream over a WebSocket and are mixed into left/right motor demand", "The DRV8833 drives both sides with slow-decay PWM for full torque on pivot turns", "The MPU6050 tracks heading and tilt at 200 Hz; the servo opens and closes the hopper on demand"],
+      hardware: ["ESP32-C3 Super Mini", "DRV8833 motor driver", "4 × BO gear motors", "MPU6050 gyro", "Micro servo", "2S Li-ion pack with BMS and 5 V buck"],
+      future: ["Battery-voltage monitoring and low-battery warning", "Wheel encoders for distance-based rows", "Autonomous row-by-row sowing"] },
     { title: "Electrical Pole Safety Alert System", repo: "Electrical-Pole-Safety-Alert-system", icon: "bolt", color: "#EA580C",
       cats: ["ESP32", "Safety", "Monitoring"],
       desc: "Real-time tilt/fall detection and current-hazard alerts with buzzer notification, persistent event history, and a Wi-Fi dashboard.",
